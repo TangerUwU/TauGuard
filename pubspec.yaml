@@ -1,0 +1,48 @@
+name: tauguard
+description: "Mountain Safe — помощник безопасности в горах (WIT Teens Hackathon)."
+publish_to: 'none'
+version: 2.0.0+2
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Геолокация
+  geolocator: ^13.0.2
+  # Контакты (выбор аварийного контакта из телефонной книги)
+  flutter_contacts: ^1.1.9+2
+  # Локальные уведомления (напоминание о точке невозврата).
+  # Версия зафиксирована: в 19+ и 22+ изменился API zonedSchedule/initialize.
+  flutter_local_notifications: ^17.2.4
+  timezone: ^0.9.4
+  # Сеть: Open-Meteo (погода, высоты) и OpenStreetMap Overpass (маршруты)
+  http: ^1.2.2
+  # Звонок 112 и SMS
+  url_launcher: ^6.3.0
+  # Офлайн-хранилище: профиль, кэш погоды и маршрутов
+  shared_preferences: ^2.3.2
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.14.3
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+flutter_launcher_icons:
+  image_path: "assets/icon/icon.png"
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  adaptive_icon_background: "#053120"
+  adaptive_icon_foreground: "assets/icon/icon_foreground.png"
+  web:
+    generate: true
+    image_path: "assets/icon/icon.png"
+    background_color: "#053120"
+    theme_color: "#053120"
